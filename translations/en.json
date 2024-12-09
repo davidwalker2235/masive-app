@@ -1,0 +1,12 @@
+{
+  "login": {
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "error": "Login Error",
+    "invalidCredentials": "Invalid username or password."
+  },
+  "home": {
+    "welcome": "Welcome to the App"
+  }
+}

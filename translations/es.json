@@ -1,0 +1,12 @@
+{
+  "login": {
+    "username": "Usuario",
+    "password": "Contraseña",
+    "loginButton": "Iniciar Sesión",
+    "error": "Error de Inicio de Sesión",
+    "invalidCredentials": "Usuario o contraseña inválidos."
+  },
+  "home": {
+    "welcome": "Bienvenido a la App"
+  }
+}
