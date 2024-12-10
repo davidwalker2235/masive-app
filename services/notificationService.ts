@@ -18,7 +18,6 @@ export const registerForPushNotifications = async () => {
     }
     token = (await Notifications.getExpoPushTokenAsync()).data;
     console.log('Token de notificaciones:', token);
-    // Enviar el token al servidor...
   } else {
     alert('Las notificaciones Push solo funcionan en dispositivos físicos.');
   }
