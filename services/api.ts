@@ -1,4 +1,3 @@
-// services/api.ts
 import { QueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 

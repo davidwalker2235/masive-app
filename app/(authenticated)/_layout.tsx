@@ -1,7 +1,6 @@
-// app/(authenticated)/_layout.tsx
 import React from 'react';
 import { View } from 'react-native';
-import { Stack, Tabs } from 'expo-router';
+import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function AuthenticatedLayout() {

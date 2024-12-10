@@ -1,4 +1,3 @@
-// hooks/usePermissions.ts
 import { useContext } from 'react';
 import { PermissionsContext } from '../contexts/PermissionsContext';
 

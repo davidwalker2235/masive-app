@@ -1,12 +1,12 @@
-// app/login.tsx
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import { View, TextInput, Alert } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import {Button} from "@/components/common/Button";
 import {useAuth} from "@/hooks/useAuth";
+import {Redirect} from 'expo-router';
 
 export default function LoginScreen() {
-  const { login } = useAuth();
+  const { login, isAuthenticated } = useAuth();
   const { t } = useTranslation();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -20,6 +20,7 @@ export default function LoginScreen() {
   };
 
   return (
+    isAuthenticated ? <Redirect href="/(authenticated)/home" /> :
     <View className="flex-1 justify-center items-center px-4 bg-white">
       <TextInput
         className="border-b border-gray-300 w-full mb-4 px-2 py-2 text-lg"

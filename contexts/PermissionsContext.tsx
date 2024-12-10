@@ -1,4 +1,3 @@
-// contexts/PermissionsContext.tsx
 import React, { createContext, useState } from 'react';
 
 interface PermissionsContextType {

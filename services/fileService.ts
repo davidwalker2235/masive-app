@@ -1,6 +1,4 @@
-// services/fileService.ts
 import * as DocumentPicker from 'expo-document-picker';
-import { Platform } from 'react-native';
 
 export const pickDocument = async () => {
   let result: any = await DocumentPicker.getDocumentAsync({});

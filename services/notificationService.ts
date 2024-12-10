@@ -1,4 +1,3 @@
-// services/notificationService.ts
 import * as Notifications from 'expo-notifications';
 import Constants from 'expo-constants';
 import { Platform } from 'react-native';
