@@ -5,10 +5,6 @@ import {View} from "react-native";
 
 export default function Index() {
   const { isAuthenticated } = useAuth();
-  useEffect(() => {
-    console.log('is Authenticated: ' + isAuthenticated)
-    debugger
-  }, [isAuthenticated]);
 
   return (
     <View className="flex-1">
