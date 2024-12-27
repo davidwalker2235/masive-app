@@ -4,7 +4,7 @@ import {queryClient} from "@/services/api";
 import {TranslationProvider} from "@/contexts/TranslationsContext";
 import {AuthProvider} from "@/contexts/AuthContext";
 import {PermissionsProvider} from "@/contexts/PermissionsContext";
-import {Stack} from "expo-router";
+import {Slot} from "expo-router";
 
 export default function RootLayout() {
 
@@ -13,14 +13,7 @@ export default function RootLayout() {
       <TranslationProvider>
         <AuthProvider>
           <PermissionsProvider>
-            <Stack
-              screenOptions={{
-                headerShown: false,
-              }}
-            >
-              <Stack.Screen name="login" options={{ headerShown: false }} />
-              <Stack.Screen name="(authenticated)/_layout" options={{ headerShown: false }} />
-            </Stack>
+            <Slot />
           </PermissionsProvider>
         </AuthProvider>
       </TranslationProvider>
