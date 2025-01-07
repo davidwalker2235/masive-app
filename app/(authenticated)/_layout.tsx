@@ -1,39 +1,36 @@
 import React from 'react';
-import { View } from 'react-native';
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import Feather from '@expo/vector-icons/Feather';
 
 export default function AuthenticatedLayout() {
   return (
-    <View className="flex-1">
-      <Tabs
-        screenOptions={{
-          headerShown: true,
-          tabBarShowLabel: true,
+    <Tabs
+      screenOptions={{ tabBarActiveTintColor: 'blue' }}
+    >
+      <Tabs.Screen
+        name="home"
+        options={{
+          tabBarIcon: ({color, size}) => (
+            <Feather name="home" size={24} color="black" />
+          ),
+          title: 'Inicio',
         }}
-      >
-        <Tabs.Screen
-          name="home"
-          options={{
-            tabBarIcon: ({ color }) => <Ionicons name="home" size={24} color={color} />,
-            title: 'Inicio',
-          }}
-        />
-        <Tabs.Screen
-          name="profile"
-          options={{
-            tabBarIcon: ({ color }) => <Ionicons name="person" size={24} color={color} />,
-            title: 'Perfil',
-          }}
-        />
-        <Tabs.Screen
-          name="settings"
-          options={{
-            tabBarIcon: ({ color }) => <Ionicons name="settings" size={24} color={color} />,
-            title: 'Configuración',
-          }}
-        />
-      </Tabs>
-    </View>
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarIcon: ({ color }) => <Ionicons name="person" size={24} color={color} />,
+          title: 'Perfil',
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          tabBarIcon: ({ color }) => <Ionicons name="settings" size={24} color={color} />,
+          title: 'Configuración',
+        }}
+      />
+    </Tabs>
   );
 }

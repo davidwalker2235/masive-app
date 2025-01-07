@@ -16,6 +16,6 @@ export default function Index() {
         <Stack.Screen name="login" options={{ headerShown: false }} />
         <Stack.Screen name="(authenticated)" options={{ headerShown: false }} />
       </Stack>
-      {isAuthenticated ? <Redirect href="/(authenticated)"/> : <Redirect href="/login"/>}
+      {isAuthenticated ? <Redirect href="/(authenticated)/home"/> : <Redirect href="/login"/>}
     </View>)
 }

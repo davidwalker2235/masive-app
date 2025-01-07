@@ -1,4 +1,8 @@
 {
+  "error": {
+    "title": "Error",
+    "message": "Ha ocurrido un error."
+  },
   "login": {
     "username": "Usuario",
     "password": "Contraseña",

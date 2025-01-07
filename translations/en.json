@@ -1,4 +1,8 @@
 {
+  "error": {
+    "title": "Error",
+    "message": "An error occurred."
+  },
   "login": {
     "username": "Username",
     "password": "Password",
