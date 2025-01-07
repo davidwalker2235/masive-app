@@ -11,8 +11,8 @@ export default function AuthenticatedLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          tabBarIcon: ({color, size}) => (
-            <Feather name="home" size={24} color="black" />
+          tabBarIcon: ({color}) => (
+            <Feather name="home" size={24} color={color} />
           ),
           title: 'Inicio',
         }}

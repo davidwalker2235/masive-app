@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { View, TextInput, Alert } from 'react-native';
-import { useTranslation } from 'react-i18next';
 import {Button} from "@/components/common/Button";
 import {useAuth} from "@/hooks/useAuth";
 import {Redirect} from 'expo-router';
+import {useTranslation} from "@/hooks/useTranslations";
 
 export default function LoginScreen() {
   const { login, isAuthenticated } = useAuth();

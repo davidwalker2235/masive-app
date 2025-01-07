@@ -10,7 +10,6 @@ const authService = {
       return true;
     } catch (error) {
       console.error('Error en login:', error);
-      await AsyncStorage.setItem('token', 'sdfsdfsdfsdf');
       return true;
     }
   },

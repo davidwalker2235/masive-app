@@ -1,12 +1,12 @@
 import * as Notifications from 'expo-notifications';
 import Constants from 'expo-constants';
 import { Platform } from 'react-native';
+import messaging from '@react-native-firebase/messaging';
 
 export const registerForPushNotifications = async () => {
   let token;
   if (Constants.isDevice) {
-    const { status: existingStatus } =
-      await Notifications.getPermissionsAsync();
+    const { status: existingStatus } = await Notifications.getPermissionsAsync();
     let finalStatus = existingStatus;
     if (existingStatus !== 'granted') {
       const { status } = await Notifications.requestPermissionsAsync();
@@ -16,7 +16,7 @@ export const registerForPushNotifications = async () => {
       alert('No se pudieron obtener los permisos para notificaciones push.');
       return;
     }
-    token = (await Notifications.getExpoPushTokenAsync()).data;
+    token = await messaging().getToken();
     console.log('Token de notificaciones:', token);
   } else {
     alert('Las notificaciones Push solo funcionan en dispositivos físicos.');

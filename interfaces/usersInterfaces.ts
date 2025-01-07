@@ -5,7 +5,7 @@ export interface UsersFromApi {
   name?: string;
 }
 
-// ************************ Models for the app ************************
+// ************************ Interfaces for the app ************************
 export interface GlobalData {
   // just an example, it could be any other data
   Brastlewark: User[]
